@@ -37,7 +37,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        $event = new Event;
+        
+        $event->namefunc = $request->namefunc;
+        $event->titlesolic = $request->titlesolic;
+        $event->setorsolic = $request->setorsolic;
+        $event->nivel = $request->nivel;
+        $event->description = $request->description;
 
+        $event->save();
+
+        return redirect('/');
 
     }
 

@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/registrar', [EventController::class, 'create']);
+Route::post('/registrar', [EventController::class, 'store']);
 Route::get('/', [EventController::class, 'index']);
+

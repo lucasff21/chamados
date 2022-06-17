@@ -32,7 +32,7 @@
                 <a href="/" class="nav-link">HOME </a>
               </li>
               <li class="nav-item">
-                <a href="/events/create" class="nav-link">| CRIAR CHAMADO |</a>
+                <a href="/registrar" class="nav-link">| CRIAR CHAMADO |</a>
               </li>
               <li class="nav-item">
                 <a href="/" class="nav-link">ENTRAR</a>

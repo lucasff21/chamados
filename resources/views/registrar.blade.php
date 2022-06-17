@@ -18,19 +18,19 @@
     <div class="row">
         <div class="col-lg-3 backdaniels" ><img src="/img/daniel.png" alt="daniel"></div>
         <div class="col-lg-6">
-            <form method="post" action="/">
+            <form method="post" action="/registrar">
                 @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nome Funcionário:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" name="namefunc">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="namefunc">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Titulo Solicitação:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" name="titlesolic">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="titlesolic">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Setor Solicitante:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" name="setorsolic">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="setorsolic">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Nivel de Prioridade:</label>
