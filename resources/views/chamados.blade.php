@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'HDC Events')
+@section('title', 'LUCAS DEV')
 
 @section('content')
     <div class="row">
@@ -27,6 +27,7 @@
                            <td> {{ $event->setorsolic }} </td>
                            <td> {{ $event->nivel }} </td>
                            <td> {{ $event->description }} </td>
+                           <td> <a class="btn btn-primary" href="/editar/{{$event->id}}">Acessar</a></td>
                     </tr>
                     @endforeach
                 </tbody>

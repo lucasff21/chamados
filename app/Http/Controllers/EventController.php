@@ -38,7 +38,7 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $event = new Event;
-        
+
         $event->namefunc = $request->namefunc;
         $event->titlesolic = $request->titlesolic;
         $event->setorsolic = $request->setorsolic;
@@ -59,7 +59,11 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+
+
+        return view('editar', ['event' => Event::findOrFail($id)]);
+
+
     }
 
     /**
