@@ -22,23 +22,36 @@
                 @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nome Funcionário:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="namefunc">
+                    <input type="text" class="form-control" id="namefunc" name="namefunc">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Titulo Solicitação:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="titlesolic">
+                    <input type="text" class="form-control" id="titlesolic" name="titlesolic">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Setor Solicitante:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" name="setorsolic">
+                    <select class="form-control optioncolor" id="setorsolic" name="setorsolic">
+                        <option class="optioncolor">Recepção</option>
+                        <option class="optioncolor">Marketing</option>
+                        <option class="optioncolor">Triagem</option>
+                        <option class="optioncolor">Compras</option>
+                        <option class="optioncolor">RH</option>
+                        <option class="optioncolor">Financeiro</option>
+                        <option class="optioncolor">Diretoria</option>
+                        <option class="optioncolor">Laboratório</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Nivel de Prioridade:</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="nivel">
+                    <select class="form-control" id="nivel" name="nivel">
                         <option>Baixo</option>
                         <option>Médio</option>
                         <option>Alto</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Data do Chamado</label>
+                    <input type="date" class="form-control" id="date" name="date">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Descrição:</label>

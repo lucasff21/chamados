@@ -41,6 +41,7 @@ class EventController extends Controller
 
         $event->namefunc = $request->namefunc;
         $event->titlesolic = $request->titlesolic;
+        $event->date = $request->date;
         $event->setorsolic = $request->setorsolic;
         $event->nivel = $request->nivel;
         $event->description = $request->description;

@@ -16,6 +16,7 @@
                         <th scope="col">Solicitante</th>
                         <th scope="col">Prioridade</th>
                         <th scope="col">Descrição</th>
+                        <th scope="col">Data</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +28,7 @@
                            <td> {{ $event->setorsolic }} </td>
                            <td> {{ $event->nivel }} </td>
                            <td> {{ $event->description }} </td>
+                           <td> {{date('d/m/Y', strtotime($event->date)) }}</td>
                            <td> <a class="btn btn-primary" href="/editar/{{$event->id}}">Acessar</a></td>
                     </tr>
                     @endforeach

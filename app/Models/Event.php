@@ -17,5 +17,7 @@ class Event extends Model
         'description'
     ];
 
+    protected $dates = [ 'date'];
+
     use HasFactory;
 }
