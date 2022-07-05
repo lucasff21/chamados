@@ -20,3 +20,5 @@ Route::post('/registrar', [EventController::class, 'store']);
 Route::get('/', [EventController::class, 'index']);
 Route::get('/editar/{id}', [EventController::class, 'show']);
 
+Route::get('/login', [EventController::class, 'auth']);
+

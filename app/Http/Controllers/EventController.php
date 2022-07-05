@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
@@ -110,5 +112,14 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function auth(Request $request)
+    {
+        if(Auth::attempt(['email' => $request->$email, 'password' => $request->$password])){
+            dd('logou');
+        }else{
+            dd('Não logou');
+        }
     }
 }
