@@ -15,20 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/cadastrar', [EventController::class, 'create']);
-Route::post('/cadastrar', [EventController::class, 'store']);
-//Route::get('/home', [EventController::class, 'index']);
-Route::get('/editar/{id}', [EventController::class, 'show']);
 
 
-Route::group(['namespace' => 'App\Http\Controllers'], function()
-{
+
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
     /**
      * Home Routes
      */
-    Route::get('/home', 'HomeController@index')->name('home.chamados');
 
-    Route::group(['middleware' => ['guest']], function() {
+    Route::get('/home', 'HomeController@index')->name('home.chamados')->middleware('auth');
+
+    Route::group(['middleware' => ['guest']], function () {
+
+
+        Route::get('/cadastrar', [EventController::class, 'create']);
+        Route::post('/cadastrar', [EventController::class, 'store']);
+        //Route::get('/home', [EventController::class, 'index']);
+        Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('auth');
+
         /**
          * Register Routes
          */
@@ -40,10 +44,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/login', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
-
     });
 
-    Route::group(['middleware' => ['auth']], function() {
+    Route::group(['middleware' => ['auth']], function () {
         /**
          * Logout Routes
          */
