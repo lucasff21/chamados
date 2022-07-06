@@ -114,12 +114,5 @@ class EventController extends Controller
         //
     }
 
-    public function auth(Request $request)
-    {
-        if(Auth::attempt(['email' => $request->$email, 'password' => $request->$password])){
-            dd('logou');
-        }else{
-            dd('Não logou');
-        }
-    }
+  
 }
