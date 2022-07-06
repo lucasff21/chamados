@@ -3,6 +3,9 @@
 @section('title', 'LUCAS DEV')
 
 @section('content')
+<div>
+    <a href="/logout"> DESCONECTAR</a>
+</div>
 
     <div class="row justify-content-beetwen">
         <div class="col-lg-3"></div>
@@ -11,7 +14,7 @@
             <H1 class="titleprincipal">LISTA DE CHAMADOS</H1>
         </div>
         <div class="col-lg-3 class-input">
-            <form action="/" method="GET">
+            <form action="/home" method="GET">
                 <label for="filter">Filtro:</label>
                 <select class="form-control optioncolor inputsize" id="filter" name="filter">
                     <option class="optioncolor" value="namefunc">Nome do User</option>
@@ -22,7 +25,7 @@
                     <option class="optioncolor" value="date">Data</option>
                 </select>
                 <input type="text" name="search" id="search" class="form-control inputsize" placeholder="Pesquisar">
-                <a href="/">Ver todos</a></p>
+                <a href="/home">Ver todos</a></p>
             </form>
         </div>
         <div class="col-lg-3"></div>

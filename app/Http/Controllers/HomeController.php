@@ -11,9 +11,17 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function index() 
+    public function index()
     {
-        $events = Event::all();
-        return view('chamados', ['events' => $events]);
+        $search = request('search');
+        $filter = request('filter');
+
+        if($search){
+            $events = Event::where([[$filter, 'like', '%'.$search.'%']]) -> get();
+        }else{
+            $events = Event::all();
+        }
+
+        return view('chamados', ['events' => $events, 'search' => $search]);
     }
 }

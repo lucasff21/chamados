@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
+use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -23,15 +24,18 @@ class LoginController extends Controller
         endif;
 
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
-        
+
         Auth::login($user);
 
-        return $this->authenticated($request, $user);
-        
+       return $this->authenticated($request, $user);
+
+
     }
 
-    protected function authenticated(Request $request, $user) 
+    protected function authenticated(Request $request, $user)
     {
-        return redirect()->intended();
+        $events = Event::all();
+
+        return view('chamados', ['events' => $events]);
     }
 }

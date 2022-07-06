@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
-Route::get('/home', [EventController::class, 'index']);
+//Route::get('/home', [EventController::class, 'index']);
 Route::get('/editar/{id}', [EventController::class, 'show']);
 
+
 Route::group(['namespace' => 'App\Http\Controllers'], function()
-{   
+{
     /**
      * Home Routes
      */

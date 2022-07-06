@@ -29,14 +29,12 @@
             </a>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a href="/" class="nav-link">HOME </a>
+                <a href="/home" class="nav-link">HOME </a>
               </li>
               <li class="nav-item">
-                <a href="/registrar" class="nav-link">| CRIAR CHAMADO |</a>
+                <a href="/cadastrar" class="nav-link">| CRIAR CHAMADO |</a>
               </li>
-              <li class="nav-item">
-                <a href="/" class="nav-link">ENTRAR</a>
-              </li>
+
             </ul>
           </div>
         </nav>

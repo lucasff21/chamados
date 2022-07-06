@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-lg-3 backdaniels" ><img src="/img/daniel.png" alt="daniel"></div>
         <div class="col-lg-6">
-            <form method="post" action="/registrar">
+            <form method="post" action="/cadastrar">
                 @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nome Funcionário:</label>
@@ -57,7 +57,8 @@
                     <label for="exampleFormControlTextarea1">Descrição:</label>
                     <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva em detalhes seu problema."></textarea>
                 </div>
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar">                  <a href="/home" class="nav-link">VOLTAR </a>
+
 
                 <p style="font-style: italic">Todos os chamados tem um prazo de no minimo <strong> 24 horas</strong> para a resolução.</p>
             </form>
