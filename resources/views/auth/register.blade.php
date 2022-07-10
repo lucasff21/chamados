@@ -7,6 +7,7 @@
         <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57">
 
         <h1 class="h3 mb-3 fw-normal">Register</h1>
+
         <div class="form-group form-floating mb-3">
             <input type="text" class="form-control" name="nickname" required="required" autofocus>
             <label for="floatingEmail">Nickname:</label>
@@ -18,6 +19,19 @@
             @if ($errors->has('email'))
                 <span class="text-danger text-left">{{ $errors->first('email') }}</span>
             @endif
+        </div>
+
+        <div class="form-group form-floating mb-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="admin"  name="admin" value="1"/>
+                <label class="form-check-label" for="inlineCheckbox1">ADMIN</label>
+              </div>
+              
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="employee" name="employee" value="1"/>
+                <label class="form-check-label" for="inlineCheckbox2">FUNCIONARIO</label>
+              </div>      
+            
         </div>
 
         <div class="form-group form-floating mb-3">

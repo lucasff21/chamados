@@ -20,14 +20,14 @@ Route::post('/cadastrar', [EventController::class, 'store']);
 Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('admin');
 
 
-  //Route::get('/home', [EventController::class, 'index']);
+  Route::get('/home', [EventController::class, 'index']);
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     Route::group(['middleware' => ['guest']], function () {
 
-        Route::get('/home', 'HomeController@index')->name('home.chamados')->middleware('auth');
+      //  Route::get('/home', 'HomeController@index')->name('home.chamados');
 
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
