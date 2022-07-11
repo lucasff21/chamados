@@ -22,6 +22,8 @@ Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('admin'
 
   Route::get('/home', [EventController::class, 'index']);
 
+  Route::get('/', [EventController::class, 'home']);
+
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
 

@@ -8,6 +8,15 @@
 }
 
 
+body{
+
+    background-image: linear-gradient(to right, rgb(71, 111, 157) , rgb(57, 60, 72));
+
+}
+
+.card{
+    border-radius: 20px;
+}
 
 .inputsize{
     width: 50%;
@@ -19,4 +28,31 @@
 
 .class-input{
     margin-left: 10%;
+}
+
+
+.title-index{
+    text-align: center;
+}
+
+.paragrafo-index{
+    font-size: 30px;
+    text-align: center;
+}
+
+.action-index{
+    text-align: center;
+}
+
+.icon-index{
+    width: 5%;
+}
+
+.position-footer{
+
+}
+
+.footer1{
+    margin-top: 25%;
+    text-align: center;
 }
