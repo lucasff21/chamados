@@ -22,19 +22,29 @@
             @endif
         </div>
 
+        <select class="form-select form-floating mb-3" aria-label="Default select example" name="user_type" id="user_type">
+            <option selected>Selecione o tipo de usuario</option>
+            <option value="2">Lab</option>
+            <option value="3">Marketing</option>
+            <option value="4">Recepção</option>
+          </select>
+
+        <!--
+//ESTAVA UTILIZANDO ESTA PARTE DO CODIGO PARA VALIDAR QUAL SERIA O TIPO DE USUARIO, PORÉM RESOLVI LANÇAR TODOS OS USERS CRIADOS COMO EMPLOOYES
+
         <div class="form-group form-floating mb-3">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="admin" name="admin" value="1" {{ old('admin') == 1 ? 'checked' : ''}}/>
+                <input class="form-check-input" type="checkbox" id="admin" name="admin" value="1" {{ old('admin') == '1' ? 'checked' : ''}}/>
                 <label class="form-check-label" for="inlineCheckbox1">ADMIN</label>
             </div>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="employee" name="employee" value="1" {{ old('employee') == 1 ? 'checked' : ''}} />
+                <input class="form-check-input" type="checkbox" id="employee" name="employee" value="1" {{ old('employee') == '1' ? 'checked' : ''}} />
                 <label class="form-check-label" for="inlineCheckbox2">FUNCIONARIO</label>
             </div>
 
         </div>
-        
+    -->
         <div class="form-group form-floating mb-3">
             <input type="password" class="form-control" name="password" value="{{ old('password') }}"
                 placeholder="Password" required="required">

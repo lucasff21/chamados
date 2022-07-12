@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean("employee")->default(0);
-            $table->boolean("admin")->default(0);
+            $table->integer("user_type")->nullable();
+
         });
     }
 
@@ -27,8 +27,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn("employee");
-            $table->dropColumn("admin");
+            $table->dropColumn("user_type");
         });
     }
 };

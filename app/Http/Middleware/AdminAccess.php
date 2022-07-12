@@ -21,7 +21,7 @@ class AdminAccess
             return $next($request);
         }else{
             if(!Auth::check()){
-                return redirect('/login');
+                return redirect('/logout');
             }
             dd("Acesso Negado");
         }

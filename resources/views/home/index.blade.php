@@ -23,7 +23,7 @@
     <script src="/js/scripts.js"></script>
 </head>
 
-<body>
+<body class="body-index">
     <div class="degrade-index">
         <header class="header-index">
             <h1 class="title-index">CHAMADOS</h1>
