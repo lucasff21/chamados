@@ -17,7 +17,7 @@ class AdminAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->admin == 1){
+        if(Auth::check() && Auth::user()->user_type == 1){
             return $next($request);
         }else{
             if(!Auth::check()){

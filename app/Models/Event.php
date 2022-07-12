@@ -17,6 +17,10 @@ class Event extends Model
         'description'
     ];
 
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
     protected $dates = [ 'date'];
 
     use HasFactory;
