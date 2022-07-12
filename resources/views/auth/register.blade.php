@@ -14,7 +14,8 @@
         </div>
 
         <div class="form-group form-floating mb-3">
-            <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="name@example.com" required="required" autofocus>
+            <input type="email" class="form-control" name="email" value="{{ old('email') }}"
+                placeholder="name@example.com" required="required" autofocus>
             <label for="floatingEmail">Email address</label>
             @if ($errors->has('email'))
                 <span class="text-danger text-left">{{ $errors->first('email') }}</span>
@@ -23,19 +24,20 @@
 
         <div class="form-group form-floating mb-3">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="admin"  name="admin" value="1"/>
+                <input class="form-check-input" type="checkbox" id="admin" name="admin" value="1" {{ old('admin') == 1 ? 'checked' : ''}}/>
                 <label class="form-check-label" for="inlineCheckbox1">ADMIN</label>
-              </div>
-              
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="employee" name="employee" value="1"/>
-                <label class="form-check-label" for="inlineCheckbox2">FUNCIONARIO</label>
-              </div>      
-            
-        </div>
+            </div>
 
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="employee" name="employee" value="1" {{ old('employee') == 1 ? 'checked' : ''}} />
+                <label class="form-check-label" for="inlineCheckbox2">FUNCIONARIO</label>
+            </div>
+
+        </div>
+        
         <div class="form-group form-floating mb-3">
-            <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+            <input type="password" class="form-control" name="password" value="{{ old('password') }}"
+                placeholder="Password" required="required">
             <label for="floatingPassword">Password</label>
             @if ($errors->has('password'))
                 <span class="text-danger text-left">{{ $errors->first('password') }}</span>
@@ -43,7 +45,8 @@
         </div>
 
         <div class="form-group form-floating mb-3">
-            <input type="password" class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="Confirm Password" required="required">
+            <input type="password" class="form-control" name="password_confirmation"
+                value="{{ old('password_confirmation') }}" placeholder="Confirm Password" required="required">
             <label for="floatingConfirmPassword">Confirm Password</label>
             @if ($errors->has('password_confirmation'))
                 <span class="text-danger text-left">{{ $errors->first('password_confirmation') }}</span>
