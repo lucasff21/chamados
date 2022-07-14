@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('comment', 300)->nullable();
-            $table->dateTime('hora_post');
-            $table->foreignId('event_id')->constrained('events');
+            $table->unsignedBigInteger('event_id')->constrained('events');
+            $table->string('comment');
             $table->timestamps();
         });
-
     }
-
 
     /**
      * Reverse the migrations.
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('comments');
     }
 };

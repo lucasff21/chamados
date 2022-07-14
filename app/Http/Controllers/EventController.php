@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Event;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -67,11 +68,19 @@ class EventController extends Controller
      */
     public function show($id)
     {
-
-
         return view('editar', ['event' => Event::findOrFail($id)]);
+    }
 
+    public function getComments($event_id)
+    {
+        // Passing post id into find()
+        return Event::find($event_id)->comments;
+    }
 
+    public function getPost($comment_id)
+    {
+        // Passing comment id into find()
+        return Comment::find($comment_id)->event;
     }
 
     /**
@@ -106,6 +115,18 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function addComent (Request $addcoment, $id)
+    {
+        $commentario = new Comment;
+
+        $commentario->comment = $addcoment->comment;
+        $commentario->event_id = $id;
+
+        $commentario->save();
+
+        return redirect('/home');
     }
 
 

@@ -4,18 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Event;
 
-class Post extends Model
+class Comment extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'comentario',
-        'hora_post',
-        'event_id'
+        "post_id",
+        "comment"
     ];
 
-    public function event(){
+
+    public function event()
+    {
         return $this->belongsTo(Event::class);
     }
-
-    use HasFactory;
 }

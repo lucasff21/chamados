@@ -19,8 +19,11 @@ Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
 Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('admin');
 
-Route::post('/editar/{id}', [PostController::class, 'store']);
+Route::post('/editar/{id}', [EventController::class, 'addComent']);
 
+
+Route::get('get-comments/{id}', [EventController::class, 'getComments']);
+Route::get('get-post/{id}', [EventController::class, 'getPost']);
 
   Route::get('/home', [EventController::class, 'index']);
 

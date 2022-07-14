@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Comment;
 
 
 class Event extends Model
@@ -17,11 +18,12 @@ class Event extends Model
         'description'
     ];
 
-    public function posts(){
-        return $this->hasMany(Post::class);
-    }
-
     protected $dates = [ 'date'];
 
     use HasFactory;
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
