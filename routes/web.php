@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\EventController;
+
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
@@ -17,13 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
+
 Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('admin');
-
-Route::post('/editar/{id}', [EventController::class, 'addComent']);
-
-
-Route::get('get-comments/{id}', [EventController::class, 'getComments']);
-Route::get('get-post/{id}', [EventController::class, 'getPost']);
+Route::post('/editar', [CommentController::class, 'store'])->name('comment');
 
   Route::get('/home', [EventController::class, 'index']);
 

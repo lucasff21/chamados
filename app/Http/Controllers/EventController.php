@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function home(){
         return view ('home.index');
     }
@@ -27,22 +21,11 @@ class EventController extends Controller
         return view('chamados', ['events' => $events]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('registrar');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $event = new Event;
@@ -60,17 +43,36 @@ class EventController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
+
         return view('editar', ['event' => Event::findOrFail($id)]);
     }
 
+
+    public function edit($id)
+    {
+        //
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+
+    public function destroy($id)
+    {
+        //
+    }
+
+
+
+}
+
+
+/*
     public function getComments($event_id)
     {
         // Passing post id into find()
@@ -82,52 +84,4 @@ class EventController extends Controller
         // Passing comment id into find()
         return Comment::find($comment_id)->event;
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function addComent (Request $addcoment, $id)
-    {
-        $commentario = new Comment;
-
-        $commentario->comment = $addcoment->comment;
-        $commentario->event_id = $id;
-
-        $commentario->save();
-
-        return redirect('/home');
-    }
-
-
-}
+*/
