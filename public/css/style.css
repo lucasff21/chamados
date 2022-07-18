@@ -72,3 +72,30 @@
     height: 300px;
     background: #fff;
 }
+
+.form-login{
+    margin-top: 5%;
+    width: 30%;
+ 
+}
+
+.button-action{
+    margin: 15px 0px;
+}
+
+.home-card{
+    width: 70%;
+}
+
+.form-edit{
+    margin-top: 5%;
+    width: 70%; 
+}
+
+.comment-index{
+    margin-top: 5px;
+}
+
+.button-register{
+    display: inline-block;
+}

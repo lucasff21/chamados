@@ -26,21 +26,21 @@
 <body class="body-index">
     <div class="degrade-index">
         <header class="header-index">
-            <h1 class="title-index">CHAMADOS</h1>
+            <h1 class="title-index" style="color: white">CHAMADOS</h1>
         </header>
 
-        <div class="container-fluid">
+        <div class="container-fluid home-card">
             <div class="card">
                 <div class="card-body">
                     <section>
-                        <p class="paragrafo-index mt-5 text-muted">Sistema desenvolvido para registro e acompanhamento
+                        <p class="paragrafo-index mt-5" style="color: black">Sistema desenvolvido para registro e acompanhamento
                             de
                             chamados (EM
                             CONSTRUÇÃO) </p>
 
 
                         <div>
-                            <h4 class="action-index">Ações</h4>
+                            <h2 class="action-index">Ações</h2>
                             <div class="button-div">
                                 <center>
                                     <button class="btn btn-primary"
@@ -64,7 +64,7 @@
                     <img class="icon-index"
                         src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
                 </a>
-                <p>Todos direitos reservados <strong> Lucas França &copy; 2022 </strong> </p>
+                <p style="color: white">Todos direitos reservados <strong> Lucas França &copy; 2022 </strong> </p>
             </div>
         </footer>
     </div>

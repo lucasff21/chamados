@@ -3,9 +3,7 @@
 @section('title', 'LUCAS DEV')
 
 @section('content')
-<div>
-    <a href="/logout"> DESCONECTAR</a>
-</div>
+
 
     <div class="row justify-content-beetwen">
         <div class="col-lg-3"></div>

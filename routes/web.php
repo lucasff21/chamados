@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
 
-Route::get('/editar/{id}', [EventController::class, 'show'])->middleware('admin');
-Route::post('/editar', [CommentController::class, 'store'])->name('comment');
+Route::get('/editar/{id}', [EventController::class, 'show']);
+Route::post('/editar', [CommentController::class, 'store'])->name('comment')->middleware('admin');
 
   Route::get('/home', [EventController::class, 'index']);
 

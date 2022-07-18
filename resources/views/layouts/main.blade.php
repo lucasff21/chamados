@@ -34,7 +34,9 @@
               <li class="nav-item">
                 <a href="/cadastrar" class="nav-link">| CRIAR CHAMADO |</a>
               </li>
-
+              <li class="nav-item">
+                <a href="/logout"><button class="btn btn-primary">DESCONECTAR</button></a>
+              </li>
             </ul>
           </div>
         </nav>

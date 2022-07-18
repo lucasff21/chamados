@@ -57,7 +57,8 @@
                     <label for="exampleFormControlTextarea1">Descrição:</label>
                     <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva em detalhes seu problema."></textarea>
                 </div>
-                <input type="submit" value="Enviar">                  <a href="/home" class="nav-link">VOLTAR </a>
+                <input type="submit" value="Enviar" class="btn btn-primary">                 
+                <a href="/home" class="btn btn-primary">VOLTAR PARA HOME </a>
 
 
                 <p style="font-style: italic">Todos os chamados tem um prazo de no minimo <strong> 24 horas</strong> para a resolução.</p>
