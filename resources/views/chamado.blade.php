@@ -29,7 +29,7 @@
     </center>
 
     <center>
-        
+
         <div class="card-body home-card">
         <div class="card-body home-card">
             <div class="card-header">Comentar</div>
@@ -54,6 +54,11 @@
                     <div class="card-body ">
                         {{ $comment->comment }}
                     </div>
+                    <form action="/chamado/{{ $comment->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <td> <button type="submit" class="btn btn-danger">Deletar</button></td>
+                    </form>
                 </div>
             </center>
         @empty

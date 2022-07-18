@@ -22,4 +22,10 @@ class CommentController extends Controller
        return back();
     }
 
+    public function destroy($id)
+    {
+        $comment = Comment::findOrFail($id);
+        $comment->delete();
+        return back();
+    }
 }

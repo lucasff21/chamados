@@ -16,16 +16,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [EventController::class, 'home']);
+Route::get('/home', [EventController::class, 'index']);
 
 Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
 
-Route::get('/editar/{id}', [EventController::class, 'show']);
-Route::post('/editar', [CommentController::class, 'store'])->name('comment')->middleware('admin');
+Route::get('/chamado/{id}', [EventController::class, 'show']);
+Route::post('/chamado', [CommentController::class, 'store'])->name('comment')->middleware('admin');
+Route::delete('/chamado/{id}', [CommentController::class, 'destroy'])->middleware('admin');
 
-  Route::get('/home', [EventController::class, 'index']);
 
-  Route::get('/', [EventController::class, 'home']);
+Route::delete('/home/{id}', [EventController::class, 'destroy'])->name('delete_event')->middleware('admin');
+
+
+
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {

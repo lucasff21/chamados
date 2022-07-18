@@ -66,7 +66,7 @@
             </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
-            <button class="w-100 btn btn-lg btn-primary button-action" src><a href="/" 
+            <button class="w-100 btn btn-lg btn-primary mt-3" src><a href="/"
                 style="color: aliceblue">VOLTAR</a></button>
 
             @include('auth.partials.copy')

@@ -46,7 +46,7 @@ class EventController extends Controller
     public function show($id)
     {
 
-        return view('editar', ['event' => Event::findOrFail($id)]);
+        return view('chamado', ['event' => Event::findOrFail($id)]);
     }
 
 
@@ -64,8 +64,11 @@ class EventController extends Controller
 
     public function destroy($id)
     {
-        //
+        $event = Event::findOrFail($id);
+        $event->delete();
+        return redirect('/home')->with('msg' , 'Chamado Deletado!');
     }
+
 
 
 

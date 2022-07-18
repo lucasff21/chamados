@@ -54,7 +54,13 @@
                             <td> {{ $event->nivel }} </td>
                             <td> {{ $event->description }} </td>
                             <td> {{ date('d/m/Y', strtotime($event->date)) }}</td>
-                            <td> <a class="btn btn-primary" href="/editar/{{ $event->id }}">Acessar</a></td>
+                            <td> <a class="btn btn-primary" href="/chamado/{{ $event->id }}">Acessar</a></td>
+
+                            <form action="/home/{{ $event->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <td> <button type="submit" class="btn btn-danger">Deletar</button></td>
+                            </form>
                         </tr>
                     @endforeach
                 </tbody>

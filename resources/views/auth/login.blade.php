@@ -29,7 +29,7 @@
 
             <div >
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-                <button class="w-100 btn btn-lg btn-primary button-action" src><a href="/register"
+                <button class="w-100 btn btn-lg btn-primary mt-3" src><a href="/register"
                         style="color: aliceblue">REGISTRAR</a></button>
             </div>
             @include('auth.partials.copy')
