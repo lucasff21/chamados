@@ -3,8 +3,8 @@
 @section('title', 'LUCAS DEV')
 
 @section('content')
-    <center>
-        <table class="table table-striped form-edit">
+
+        <table class="table table-striped form-edit ">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -26,7 +26,7 @@
                 <td> {{ date('d/m/Y', strtotime($event->date)) }}</td>
             </tbody>
         </table>
-    </center>
+
 
     <center>
 
@@ -49,18 +49,19 @@
 
     <ul>
         @forelse ($event->comments as $comment)
-            <center>
+
                 <div class="card comment-index form-edit">
                     <div class="card-body ">
                         {{ $comment->comment }}
+                        <form action="/chamado/{{ $comment->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <td> <button type="submit" class="btn btn-danger float-right">Deletar</button></td>
+                        </form>
                     </div>
-                    <form action="/chamado/{{ $comment->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <td> <button type="submit" class="btn btn-danger">Deletar</button></td>
-                    </form>
+
                 </div>
-            </center>
+
         @empty
             <li>Não temos comentarios</li>
         @endforelse
