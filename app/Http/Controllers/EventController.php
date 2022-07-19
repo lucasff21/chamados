@@ -52,13 +52,24 @@ class EventController extends Controller
 
     public function edit($id)
     {
-        //
+        $event = Event::findOrFail($id);
+        return view('editar', ['event' => $event]);
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+        $event = Event::findOrFail($id);
+
+        $event->update([
+            $event->namefunc = $request->namefunc,
+            $event->titlesolic = $request->titlesolic,
+            $event->setorsolic = $request->setorsolic,
+            $event->nivel = $request->nivel,
+            $event->description = $request->description,
+        ]);
+        
+        return back();
     }
 
 
@@ -70,21 +81,6 @@ class EventController extends Controller
     }
 
 
-
-
 }
 
 
-/*
-    public function getComments($event_id)
-    {
-        // Passing post id into find()
-        return Event::find($event_id)->comments;
-    }
-
-    public function getPost($comment_id)
-    {
-        // Passing comment id into find()
-        return Comment::find($comment_id)->event;
-    }
-*/

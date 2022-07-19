@@ -21,11 +21,11 @@
             <form method="post" action="/cadastrar">
                 @csrf
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Nome Funcionário:</label>
+                    <label for="namefunc">Nome Funcionário:</label>
                     <input type="text" class="form-control" id="namefunc" name="namefunc">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Titulo Solicitação:</label>
+                    <label for="titlesolic">Titulo Solicitação:</label>
                     <input type="text" class="form-control" id="titlesolic" name="titlesolic">
                 </div>
                 <div class="form-group">
@@ -42,7 +42,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Nivel de Prioridade:</label>
+                    <label for="nivel">Nivel de Prioridade:</label>
                     <select class="form-control" id="nivel" name="nivel">
                         <option>Baixo</option>
                         <option>Médio</option>
@@ -50,12 +50,12 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Data do Chamado</label>
+                    <label for="date">Data do Chamado</label>
                     <input type="date" class="form-control" id="date" name="date">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descrição:</label>
-                    <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva em detalhes seu problema."></textarea>
+                    <label for="description">Descrição:</label>
+                    <textarea name="description" id="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva em detalhes seu problema."></textarea>
                 </div>
                 <input type="submit" value="Enviar" class="btn btn-primary">                 
                 <a href="/home" class="btn btn-primary">VOLTAR PARA HOME </a>

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [EventController::class, 'home']);
 Route::get('/home', [EventController::class, 'index']);
+Route::delete('/home/{id}', [EventController::class, 'destroy'])->name('delete_event')->middleware('admin');
 
 Route::get('/cadastrar', [EventController::class, 'create']);
 Route::post('/cadastrar', [EventController::class, 'store']);
@@ -26,9 +27,10 @@ Route::get('/chamado/{id}', [EventController::class, 'show']);
 Route::post('/chamado', [CommentController::class, 'store'])->name('comment')->middleware('admin');
 Route::delete('/chamado/{id}', [CommentController::class, 'destroy'])->middleware('admin');
 
-
 Route::delete('/home/{id}', [EventController::class, 'destroy'])->name('delete_event')->middleware('admin');
 
+Route::get('/chamado/editar/{id}', [EventController::class, 'edit']);
+Route::post('/chamado/editar/{id}', [EventController::class, 'update'])->name('alter_event');
 
 
 
@@ -36,8 +38,6 @@ Route::delete('/home/{id}', [EventController::class, 'destroy'])->name('delete_e
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
     Route::group(['middleware' => ['guest']], function () {
-
-      //  Route::get('/home', 'HomeController@index')->name('home.chamados');
 
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');

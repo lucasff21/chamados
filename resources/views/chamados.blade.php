@@ -61,6 +61,7 @@
                                 @method('DELETE')
                                 <td> <button type="submit" class="btn btn-danger">Deletar</button></td>
                             </form>
+                            <td> <a class="btn btn-warning" href="/chamado/editar/{{ $event->id }}">Editar</a></td>
                         </tr>
                     @endforeach
                 </tbody>
