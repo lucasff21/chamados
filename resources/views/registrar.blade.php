@@ -16,9 +16,10 @@
 <body>
 
     <div class="row">
-        <div class="col-lg-3 backdaniels" ><img src="/img/daniel.png" alt="daniel"></div>
+        <div class="col-lg-3 backdaniels" ></div>
         <div class="col-lg-6">
             <form method="post" action="/cadastrar">
+                <h1 style="text-align: center">CADASTRAR</h1>
                 @csrf
                 <div class="form-group">
                     <label for="namefunc">Nome Funcionário:</label>
@@ -57,14 +58,14 @@
                     <label for="description">Descrição:</label>
                     <textarea name="description" id="description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva em detalhes seu problema."></textarea>
                 </div>
-                <input type="submit" value="Enviar" class="btn btn-primary">                 
+                <input type="submit" value="Enviar" class="btn btn-primary">
                 <a href="/home" class="btn btn-primary">VOLTAR PARA HOME </a>
 
 
                 <p style="font-style: italic">Todos os chamados tem um prazo de no minimo <strong> 24 horas</strong> para a resolução.</p>
             </form>
         </div>
-        <div class="col-lg-3 backdaniels"><img src="/img/daniel.png" alt="daniel"></div>
+        <div class="col-lg-3 backdaniels"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
